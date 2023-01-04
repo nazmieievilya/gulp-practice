@@ -3,23 +3,33 @@ function burgerMenu() {
   const burger = document.querySelector(".burger");
   const menu = document.querySelector(".menu");
   const body = document.querySelector("body");
+  const navBtns = document.querySelector(".nav_buttons");
+  const select = document.querySelector("#select");
+  const nav = document.querySelector(".nav_control");
   burger.addEventListener("click", () => {
     if (!menu.classList.contains("active")) {
       menu.classList.add("active");
       burger.classList.add("active");
       body.classList.add("locked");
+      select.classList.add("active");
+      nav.classList.add("active");
     } else {
       menu.classList.remove("active");
       burger.classList.remove("active");
       body.classList.remove("locked");
+
+      select.classList.remove("active");
+      nav.classList.remove("active");
     }
   });
   // Вот тут мы ставим брейкпоинт навбара
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 991.98) {
+    if (window.innerWidth > 768) {
       menu.classList.remove("active");
       burger.classList.remove("active");
       body.classList.remove("locked");
+      select.classList.remove("active");
+      nav.classList.remove("active");
     }
   });
 }

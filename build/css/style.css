@@ -148,7 +148,6 @@ body.locked {
   top: 0;
   right: 0;
   bottom: 0;
-  background: white;
   z-index: -1;
   display: none;
 }
@@ -307,6 +306,10 @@ body.locked {
   color: white;
 }
 
+.menu__item__mobile {
+  display: none;
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -372,10 +375,36 @@ body.locked {
   margin-left: auto;
 }
 
+.select.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 40;
+  margin: 0;
+  position: absolute;
+  left: 24px;
+  top: 28px;
+}
+
 .nav_buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.nav_buttons.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 40;
+  position: absolute;
+  z-index: 40;
+  bottom: 12px;
+  left: 24px;
+}
+
+.nav_buttons.active a:first-child {
+  margin-left: 8px;
 }
 
 .nav_buttons a:first-child {
@@ -404,7 +433,19 @@ body.locked {
   }
 }
 
-@media screen and (max-width: 991.98px) {
+@media (max-width: 767.98px) {
+  .container {
+    max-width: 740px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .menu__item__mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   .menu {
     position: fixed;
     background: #131418;
@@ -439,6 +480,18 @@ body.locked {
             animation: fade 0.1s linear;
   }
 
+  .select {
+    margin-right: 52px;
+  }
+
+  .nav_buttons {
+    display: none;
+  }
+
+  .menu li:first-child {
+    margin-left: 0;
+  }
+
   .burger {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -446,6 +499,10 @@ body.locked {
     position: relative;
     height: 20px;
     width: 30px;
+  }
+
+  .burger.active {
+    margin-left: 12px;
   }
 
   .burger.active:before {
@@ -490,10 +547,12 @@ body.locked {
 
   .burger:before {
     top: 0;
+    background: white;
   }
 
   .burger::after {
     bottom: 0;
+    background: white;
   }
 
   .burger span {
@@ -502,6 +561,7 @@ body.locked {
     right: 0;
     width: 100%;
     background: #131418;
+    background: white;
     height: 2px;
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
@@ -509,12 +569,6 @@ body.locked {
     -webkit-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
     -o-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
     transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .container {
-    max-width: 740px;
   }
 }
 
