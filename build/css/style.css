@@ -86,6 +86,7 @@ body.locked {
   padding: 15px 22px;
   font-style: normal;
   font-size: 18px;
+  display: inline-block;
   line-height: 22px;
   /* identical to box height */
   letter-spacing: 0.01em;
@@ -419,6 +420,77 @@ body.locked {
   display: none;
   background: transparent;
   z-index: 3;
+}
+
+.page_header {
+  height: 900px;
+  background-color: #001731;
+  position: relative;
+}
+
+.hero_img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 702px;
+}
+
+.hero__gradient {
+  position: absolute;
+  width: 869px;
+  height: 869px;
+  left: 455px;
+  top: 321px;
+  background: -o-radial-gradient(50% 50%, 50% 50%, rgba(57, 139, 255, 0.324) 0%, rgba(57, 139, 255, 0.24) 20.83%, rgba(57, 139, 255, 0) 100%);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(57, 139, 255, 0.324) 0%, rgba(57, 139, 255, 0.24) 20.83%, rgba(57, 139, 255, 0) 100%);
+  opacity: 0.75;
+}
+
+.section__hero {
+  background-color: #001731;
+}
+
+.hero__container {
+  padding-top: 132px;
+  padding-left: 120px;
+}
+
+.hero__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 95%;
+  /* or 68px */
+  width: 715px;
+  letter-spacing: -0.03em;
+  /* white */
+  margin-bottom: 34px;
+  color: #ffffff;
+}
+
+.hero__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-span {
+  font-size: 20px;
+  line-height: 145%;
+  /* identical to box height, or 29px */
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.hero__text {
+  width: 533px;
+  margin-top: 36px;
+  font-size: 22px;
+  line-height: 145%;
+  color: #aac0e0;
 }
 
 @media (max-width: 1199.98px) {
